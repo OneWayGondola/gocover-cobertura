@@ -24,6 +24,7 @@ func main() {
 func convert(in io.Reader, out io.Writer) {
 	profiles, err := ParseProfiles(in)
 	if err != nil {
+		fmt.Printf("Error occurred during ParseProfiles: %s", err.Error())
 		panic("Can't parse profiles")
 	}
 
